@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: Author
+      changes:
+        - dropColumn:
+            tableName: users
+            columnName: firstname
+
+        - dropColumn:
+            tableName: users
+            columnName: lastname
+
+        - addColumn:
+            tableName: users
+            columns:
+              - column:
+                  name: username
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: false
+                    unique: true

@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: 5
+      author: Author
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column: { name: username, value: "admin" }
+              - column: { name: password, value: "$2y$10$0GO5Zn6yMM3LWwHg7D5Dt.4ExJkExudEnuf6aeOLrFY.3Dcc.qDGa" } # admin
+              - column: { name: role_id, valueNumeric: 1 }
+
+        - insert:
+            tableName: users
+            columns:
+              - column: { name: username, value: "user" }
+              - column: { name: password, value: "$2y$10$z0IErrTjFFk.Z5l8446EyeTc4toPKeePkU.KL8tZtbfXhmEr6ZM/y" } # user
+              - column: { name: role_id, valueNumeric: 2 }
+
+        - insert:
+            tableName: users
+            columns:
+              - column: { name: username, value: "user1" }
+              - column: { name: password, value: "$2y$10$NOW5ZQAIZtFyrVmrpqzQXegNoIvD018eBN8gTUAqNCqiM24/0gAbC" } # user1
+              - column: { name: role_id, valueNumeric: 2 }
+
+        - insert:
+            tableName: users
+            columns:
+              - column: { name: username, value: "user2" }
+              - column: { name: password, value: "$2y$10$A7YDeZVw92.qSIn5PUeO3ukUFIG5fbZPedq6wMD5YI1yoW.m3OOse" } # user2
+              - column: { name: role_id, valueNumeric: 2 }
